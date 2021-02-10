@@ -10,12 +10,12 @@
       exec("SuggestLabels.R");
 	  //grab the date so you can concate the string with the date to access the right file
 	  $date = date("Y-m-d");
+	  echo $date;
 	  $filename = "All_CR_". $date . "pdf";
+	  echo $filename
     ?>
 	
-	<p>$filename</p>
 	
-	$date = date("Y-m-d");
 	<!-- <iframe src="All_CR_2021-02-04.pdf" ></iframe> -->
     
   </body>

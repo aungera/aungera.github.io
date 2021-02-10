@@ -14,13 +14,13 @@
 	  
 	  //grab the date so you can concate the string with the date to access the right file
 	  $date = date("Y-m-d");
-	  $filename = "All_CR_". $date . ".pdf";
+	  $filename = 'All_CR_'. $date . '.pdf';
 	  echo $filename;
 	  echo "<br>";
-	  echo "<iframe src = \"";
-	  echo $filename;
-	  echo "\" ></iframe>";
-	  //echo <iframe src = $filename ></iframe> ;
+	  
+	  
+	  $showimage = '<iframe src= \''. $filename . '\'></iframe>';
+	  
 	  echo "<br>";
 	  
     ?>

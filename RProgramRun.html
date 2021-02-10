@@ -8,14 +8,19 @@
     <?php
       // Execute the R script within PHP code
       // Generates output as test.png image.
-      //exec("SuggestLabels.R");
+      
+	  //$out = shell_exec("Rscript --verbose SuggestLabels.R");
+	  
+	  
 	  //grab the date so you can concate the string with the date to access the right file
 	  $date = date("Y-m-d");
 	  $filename = "All_CR_". $date . ".pdf";
 	  echo $filename;
 	  echo "<br>";
-	 
-	  echo <iframe src = $filename ></iframe> ;
+	  echo "<iframe src = \"";
+	  echo $filename;
+	  echo "\" ></iframe>";
+	  //echo <iframe src = $filename ></iframe> ;
 	  echo "<br>";
 	  
     ?>

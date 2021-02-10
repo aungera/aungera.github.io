@@ -1,26 +1,26 @@
+<!DOCTYPE html>
 <html>
-<head>
-<script src="jquery-2.1.4.js"></script>
-<script lang="javascript" src="xlsx.full.min.js"></script>
-<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
 <body>
-<div id="navbar"><span>Red Stapler - SheetJS </span></div>
-<div id="wrapper">
-        
-        <input type="file" id="input-excel" />
-</div>
-<script>
-        $('#input-excel').change(function(e){
-                var reader = new FileReader();
-                reader.readAsArrayBuffer(e.target.files[0]);
-                reader.onload = function(e) {
-                        var data = new Uint8Array(reader.result);
-                        var wb = XLSX.read(data,{type:'array'});
-                        var htmlstr = XLSX.write(wb,{sheet:"sheet no1", type:'binary',bookType:'html'});
-                        $('#wrapper')[0].innerHTML += htmlstr;
-                }
-        });
-</script>
-</body>
+  
+    <?php
+      // Execute the R script within PHP code
+      // Generates output as test.png image.
+      //exec("SuggestLabels.R");
+	  //grab the date so you can concate the string with the date to access the right file
+	  $date = date('Y-m-d');
+	  $filename = 'All_CR_'. $date . '.pdf';
+	  echo $filename;
+	  echo '<br>';
+	 
+	  echo '<iframe src =' . $filename . '></iframe>' ;
+	  echo '<br>';
+	  
+    ?>
+	
+	<p>yelp-- in other words</p>
+	
+	<!-- <iframe src= 'All_CR_2021-02-10.pdf' ></iframe> -->
+	<iframe src= 'All_CR_2021-02-10.pdf' ></iframe>
+    
+  </body>
 </html>

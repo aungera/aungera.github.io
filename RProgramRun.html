@@ -8,11 +8,14 @@
       // Execute the R script within PHP code
       // Generates output as test.png image.
       exec("SuggestLabels.R");
+	  //grab the date so you can concate the string with the date to access the right file
+	  $date = date("Y-m-d");
+	  $filename = "All_CR_". $date . "pdf";
     ?>
 	
-	<p>heyo</p>
+	<p>$filename</p>
 	
-	
+	$date = date("Y-m-d");
 	<!-- <iframe src="All_CR_2021-02-04.pdf" ></iframe> -->
     
   </body>
